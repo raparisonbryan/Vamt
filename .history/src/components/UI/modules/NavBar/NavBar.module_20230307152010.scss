@@ -1,0 +1,71 @@
+@import 'src/styles/settings.scss';
+
+.container {
+
+    position: absolute;
+    width: 100%;
+    height: $navbarHeight;
+    top: 0;
+
+    padding: 0 2rem;
+    z-index: 1;
+
+    background-color: $navbarColor;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.3);
+    user-select: none;
+
+
+    .leftNav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+
+        z-index: 2;
+
+        .navItem {
+            margin-right: 2rem;
+            font-size: $fsize;
+            font-family: $navfont;
+            
+            color: $navbarItemColor;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+
+            &:hover {
+                color: $navbarItemHoverColor;
+                
+            }
+        }
+    }
+
+    .rightNav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+            cursor: pointer;
+            color: $navbarItemColor ;
+            font-size: $navbarTextSize;
+            font-family: $fontFamily;
+            font-weight: 700;
+            margin-right: 1rem;
+
+            padding: .5rem .8rem;
+            transition: all 0.2s ease-in-out;
+           
+            &:hover {
+                color: $navbarItemHoverColor;
+                transform: scale(1.1);
+            }
+            
+        }
+    }
+}
+
+

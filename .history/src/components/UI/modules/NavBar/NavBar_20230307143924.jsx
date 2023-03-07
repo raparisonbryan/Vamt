@@ -1,0 +1,20 @@
+import styles from "./NavBar.module.scss";
+
+
+export default function NavBar() {
+    return (
+        <>
+        
+            <div className={styles.container}>
+
+                <div className={styles.rightNav}>
+
+              
+
+                </div>
+
+            </div>
+
+        </>
+    )
+}
