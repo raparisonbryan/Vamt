@@ -1,0 +1,152 @@
+@import 'styles/settings.scss';
+@import 'styles/fonts.scss';
+
+.container {
+   margin-top: 100px;
+   padding-left: 50px;
+   padding-right: 50px;
+
+   .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: $fontFamily;
+    font-size: 2.5rem;
+   }
+
+   p {
+      font-size: 1.2rem;
+      font-family: $font;
+   }
+
+   .about1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      box-shadow: 0 2px 6px 3px rgba(0, 0, 0, 0.2);
+      border-radius: 30px;
+      padding: 30px;
+      margin-bottom: 60px;
+
+      .left {
+         width: 40%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+
+         .about_img {
+            width: 400px;
+            height: auto;
+            border-radius: 30px;
+            background-size: contain;
+         }
+      }
+
+      .right {
+         width: 60%;
+         padding: 0 30px 0 30px;
+      }
+      
+   }
+
+   .about2 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+       box-shadow: 0 2px 6px 3px rgba(0, 0, 0, 0.2);
+      border-radius: 30px;
+      padding: 30px;
+      margin-bottom: 60px;
+
+      .left2 {
+         width: 50%;
+         padding: 0 30px 0 30px;
+      }
+      
+      .right2 {
+         width: 50%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         .about_img2 {
+            border-radius: 30px;
+            width: auto;
+            height: 350px;
+            border-radius: 30px;
+            background-size: contain;
+         }
+      }
+      
+   }
+
+   @media screen and (max-width: 767px) {
+      .container {
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+
+      .title {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         margin-bottom: 50px;
+         font-size: 1.5rem;
+        }
+
+      .about1 {
+         flex-direction: column;
+         align-items: center;
+         padding: 0; 
+
+         .left {
+            width: 100%;
+            margin-bottom: 30px;
+
+            .about_img {
+               width: 100%;
+               height: auto;
+               border-radius: 30px;
+               background-size: contain;
+            }
+         }
+
+         .right {
+            width: 100%;
+         }
+      }
+
+      .about2 {
+         flex-direction: column-reverse;
+         align-items: center;
+         
+
+         .left2 {
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 0;
+         }
+
+         .right2 {
+            width: 100%;
+            margin-bottom: 30px;
+
+            .about_img2 {
+               width: 100%;
+               height: auto;
+               border-radius: 30px;
+               background-size: contain;
+            }
+         }
+      }
+      
+      
+   }
+}
+
+
