@@ -7,7 +7,7 @@ const NavLinks = (props) => {
         <ul>
             <li onClick={() => props.isMobile && props.closeMobileMenu()}><NavBarTab label="Nos vehicules" link="/vehicles" /></li>
             <li onClick={() => props.isMobile && props.closeMobileMenu()}><NavBarTab label="A propos" link="/about" /></li>
-            <li className={styles.contact} onClick={() => props.isMobile && props.closeMobileMenu()}><NavBarTab label="Contact" link="/contact" /></li>
+            <li className={styles.contact} onClick={() => props.isMobile && props.closeMobileMenu()}><NavBarTab label="Contact" link="/nousContacter" /></li>
         </ul>
     );
 };
