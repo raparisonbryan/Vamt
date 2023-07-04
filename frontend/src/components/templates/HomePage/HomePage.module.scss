@@ -3,32 +3,15 @@
 
 .container {
 
-  /* -- Background -- */
+  /* -- hero -- */
   .background {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
    
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: $mainColor;
-
-    .left {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        .imageHead {
-            width: 600px;
-            height: 250px;
-            background-size: contain;
-            background-position: center;
-            border-radius: 25px;
-        }  
-    }
+    background-color: $greyColor;
 
     .right {
         width: 100%;
@@ -37,19 +20,126 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        .imageHead {
+            width: 100%;
+            height: auto;
+            background-size: contain;
+            background-position: center;
+            border-radius: 25px;
+        }  
+    }
+
+    .left {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         color: $navFootColor;
         font-size: $fsize;
         font-family: $fontFamily;
-        line-height: 0px;
+        margin-left: 5%;
 
     }
 
-    .right p {
+    .left p {
         font-size: 1.2rem;
         font-family: $font;
-        font-weight: bold;
+        font-weight: normal;
+    }
+
+    .buttonDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+        gap: 10px;
+
+        .button {
+            width: 170px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: $navFootColor;
+            color: $mainColor;
+            font-size: $navbarTextSize ;
+            font-family: $font;
+            font-weight: normal;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            border: none;
+            outline: none;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
     }
   }
+
+
+
+
+  //benefice
+  .benefice {
+    height: 100vh;
+    padding-top: 60px;
+
+    .beneficeTitle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2%;
+      font-size: $fsize;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: $fontFamily;
+      color: $navFootColor;
+    }
+
+    .beneficeDiv {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5%;
+      padding: 5%;
+
+      .beneficeCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: 300px;
+        margin-bottom: 5%;
+        padding: 10px;
+        text-align: center;
+
+        background-color: $blueColor ;
+        border-radius: 25px;
+
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
+
+        p {
+          font-size: 1rem;
+          font-family: $font;
+          font-weight: normal;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          font-family: $font;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+
+
 
   //CarChoice
   .carDiv {
@@ -109,6 +199,7 @@
         .description {
           font-size: 1.2rem;  
           font-family: $font;
+          font-weight: normal;
         }
 
         .imageDiv1 {

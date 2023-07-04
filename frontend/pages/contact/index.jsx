@@ -10,3 +10,9 @@ export default function contact() {
     </>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: {} 
+  };
+}

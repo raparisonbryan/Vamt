@@ -13,7 +13,7 @@ export default function FooterBar() {
                         <div className={styles.leftFooter}> 
                         <Link href="/" legacyBehavior>
                             
-                            <img className={styles.logo} src="/assets/ltds-logo.png" alt="logo"></img>
+                            <img className={styles.logo} src="/assets/logo.png" alt="logo"></img>
                         </Link>
                         </div>
                         <div className={styles.rightFooter}> 

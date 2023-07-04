@@ -10,7 +10,7 @@ export default function NavBar() {
         <div className={styles.container}>
             <div className={styles.leftNav}>
                 <Link href="/" legacyBehavior>
-                    <img className={styles.logo} src="/assets/ltds-logo.png" alt="logo" />
+                    <img className={styles.logo} src="/assets/logo.png" alt="logo" />
                 </Link>
             </div>
 
