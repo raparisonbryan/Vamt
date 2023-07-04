@@ -14,10 +14,6 @@ const mongoose = require("mongoose");
  */
 
 const carSchema = mongoose.Schema({
-  userId: {
-    type: String,
-    required: true,
-  },
   name: {
     type: String,
     required: false,
