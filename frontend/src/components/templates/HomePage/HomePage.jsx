@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from 'next/router';
 
-export default function HomePage( {cars} ) {
+export default function HomePage() {
     const [searchTerm, setSearchTerm] = useState('');
     const router = useRouter();
 
@@ -26,19 +26,23 @@ export default function HomePage( {cars} ) {
                         <h1>Location de voiture à prix réduit</h1>
                         <p>Roulez avec style et simplicité grâce à notre service de location</p>
                         <div className={styles.buttonDiv}>
-                            <button className={styles.button}>Réserver</button>
-                            <button className={styles.button}>Nos véhicules</button>   
+                            <Link href="/nousContacter">
+                                <button className={styles.button}>Réserver</button>
+                            </Link>
+                            <Link href="/vehicles">
+                                <button className={styles.button}>Nos véhicules</button>
+                            </Link>   
                         </div> 
-                        <div>
+                        <div className={styles.formDiv}>
                             <form onSubmit={handleSearchSubmit}>
-                            <input type="text" value={searchTerm} onChange={handleSearchChange} placeholder="Rechercher une voiture par nom" />
-                            <button type="submit">Rechercher</button>
+                            <input className={styles.input} type="text" value={searchTerm} onChange={handleSearchChange} placeholder="Rechercher une voiture par nom" />
+                            <button className={styles.button} type="submit">Rechercher</button>
                             </form>
                         </div>
                     </div>
 
                     <div className={styles.right}>
-                        <img className={styles.imageHead} src="/assets/v8-accueil.png" alt="image"></img>
+                        <img className={styles.imageHead} src="/assets/home/v8-accueil.png" alt="image"></img>
                     </div>
                 </div>
 

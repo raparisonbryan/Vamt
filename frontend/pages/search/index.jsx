@@ -13,13 +13,13 @@ export default function SearchPage({ cars }) {
   );
 }
 
-export const getStaticProps = async () => {
-    const response = await fetch('http://localhost:3000/api/cars/');
-    const cars = await response.json();
-    
-    return {
-        props: {
-        cars,
-        },
-    };
-}
+export const getServerSideProps = async () => {
+  const response = await fetch("http://localhost:3000/api/cars/");
+  const cars = await response.json();
+
+  return {
+    props: {
+      cars,
+    },
+  };
+};
