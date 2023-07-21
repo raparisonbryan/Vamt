@@ -13,7 +13,7 @@ export default function Vehicles({ cars }) {
       <div className={styles.container}>
         <div className={styles.hero}>
           <div className={styles.heroText}>
-            <p>La route vous attend, choisissez votre compagnion</p>
+            <p>La route vous attend, choisissez votre companion</p>
           </div>
         </div>
         <div className={styles.title}>

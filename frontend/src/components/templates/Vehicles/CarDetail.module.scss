@@ -1,0 +1,83 @@
+@import 'styles/settings.scss';
+@import 'styles/fonts.scss';
+
+.container {
+    height: 80vh;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: $fontFamily;
+        color: $navFootColor;
+    }
+
+    .carDetail {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 200px;
+
+        .imageDiv {
+            width: 600px;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+            margin: 0;
+
+            .image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .textDiv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 500px;
+            height: auto;
+            background-color: $greyColor;
+            border-radius: 20px;
+            padding: 20px;
+
+            .name {
+                margin-bottom: 0;
+                margin-top: 20px;
+                font-family: $font;
+                font-size: 1rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: $navFootColor;
+            }
+
+            .link {
+                width: 200px;
+                height: 40px;
+                border-radius: 20px;
+                background-color: $navFootColor;
+                color: $mainColor;
+                font-size: $navbarTextSize ;
+                font-family: $font;
+                font-weight: normal;
+                text-transform: uppercase;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+                border: none;
+                outline: none;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
