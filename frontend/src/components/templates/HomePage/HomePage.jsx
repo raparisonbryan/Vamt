@@ -5,7 +5,14 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from 'next/router';
 
-export default function HomePage() {
+// import Swiper core and required modules
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+export default function HomePage({ cars }) {
     const [searchTerm, setSearchTerm] = useState('');
     const router = useRouter();
 
@@ -18,6 +25,14 @@ export default function HomePage() {
         router.push(`/search?term=${encodeURIComponent(searchTerm)}`);
     };
 
+    const handleClick = (e) => {
+        e.preventDefault();
+        const element = document.getElementById('vehicles');
+        element.scrollIntoView({ behavior: 'smooth' });
+      };
+
+    if (!cars) return <h1>Loading...</h1>;
+
     return (
         <>
             <div className={styles.container}>
@@ -29,8 +44,8 @@ export default function HomePage() {
                             <Link href="/nousContacter">
                                 <button className={styles.button}>Réserver</button>
                             </Link>
-                            <Link href="/vehicles">
-                                <button className={styles.button}>Nos véhicules</button>
+                            <Link href="#vehicles">
+                                <button className={styles.button} onClick={handleClick}>Nos véhicules</button>
                             </Link>   
                         </div> 
                         <div className={styles.formDiv}>
@@ -67,6 +82,48 @@ export default function HomePage() {
                             <h3>Diversité des services</h3>
                             <p>Notre service de location de voiture est diversifié et vous permet de rouler en toute sécurité</p>   
                         </div>
+                    </div>
+                </div>
+
+
+                <div id="vehicles" className={styles.carCarousel}>
+                    <div className={styles.title}>
+                        <h1>Nos véhicules</h1>
+                    </div>
+                    <div className={styles.slider}>
+                        <Swiper
+                            modules={[Navigation]}
+                            autoplay={{ delay: 3000 }}
+                            loop={true}
+                            slidesPerView={2} 
+                            navigation  
+                            breakpoints={{
+                                // lorsque la largeur de l'écran est au moins 320 pixels
+                                320: {
+                                  slidesPerView: 1,                             
+                                },
+                                // lorsque la largeur de l'écran est au moins 640 pixels
+                                640: {
+                                  slidesPerView: 2,
+                                }
+                            }}
+                            onSwiper={(swiper) => console.log(swiper)}
+                            onSlideChange={() => console.log('slide change')}                       
+                        >
+                            {cars.map(car => (
+                            <SwiperSlide key={car._id}>
+                                <div className={styles.carCard}>
+                                <div className={styles.imageDiv}>
+                                    <img className={styles.image} src={car.imageUrl} alt="Car Image" />
+                                </div>
+                                <h2 className={styles.name}>{car.name}</h2>
+                                <Link className={styles.link} href={`/vehicles/${car._id}`}>
+                                    <p>Voir la voiture</p>
+                                </Link>
+                                </div>
+                            </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 </div>
 

@@ -2,16 +2,18 @@
 @import 'styles/fonts.scss';
 
 .container {
+  background: rgb(238,248,250);
+  background: linear-gradient(90deg, rgba(238,248,250,1) 0%, rgba(250,250,255,1) 65%, rgba(240,255,255,1) 100%);
 
   /* -- hero -- */
   .background {
     width: 100%;
     height: 80vh;
-   
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: $greyColor;
+    
 
     .right {
         width: 100%;
@@ -129,10 +131,78 @@
 
 
 
+  //Car carousel
+  .carCarousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: $fsize;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: $fontFamily;
+      color: $navFootColor;
+    }
+
+    .slider {
+        width: 80%;
+        margin-bottom: 100px;
+        padding-top: 40px;
+        border-radius: 10px;
+
+        .carCard {
+            height: 430px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .name {
+                margin-bottom: 0;
+                margin-top: 20px;
+                font-family: $fontFamily;
+            }
+
+            .link {
+                padding: 0 20px 0 20px;
+                background-color: $navFootColor;
+                color: $navbarItemColor;
+                border-radius: 5px;
+                margin-top: 20px;
+                font-family: $font;
+            }
+
+            .imageDiv {
+                width: 400px;
+                height: auto;
+                border-radius: 10px 10px 0 0;
+                margin: 0;
+
+                .image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+  }
+
+
+
+
 
   //benefice
   .benefice {
-    height: 100vh;
+    height: 100%;
     padding-top: 60px;
 
     .beneficeTitle {
@@ -145,6 +215,10 @@
       text-transform: uppercase;
       font-family: $fontFamily;
       color: $navFootColor;
+
+        h2 {
+          text-align: center;
+        }
     }
 
     .beneficeDiv {
@@ -154,6 +228,7 @@
       align-items: center;
       gap: 5%;
       padding: 5%;
+      padding-bottom: 0;
 
       .beneficeCard {
         display: flex;
@@ -300,8 +375,12 @@
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
+        height: 100%;
+        padding-bottom: 40px;
+        padding-top: 40px;
 
         .left {
+            margin: 0;
 
             .imageHead {
                 width: 100%;
@@ -311,6 +390,22 @@
                 border-radius: 25px;
                 padding: 5%;
             }  
+
+            .buttonDiv {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .formDiv {
+                
+              form {
+                flex-direction: column;
+
+                .input {
+                  width: 100%;
+                }
+              }
+            }
         }
 
         .right {
@@ -325,6 +420,49 @@
             font-weight: bold;
         }
     }
+
+
+
+
+    .benefice {
+      height: 100%;
+
+      .beneficeTitle {
+        h2 {
+          text-align: center;
+        }
+      }
+
+      .beneficeDiv {
+        flex-direction: column;
+
+        .beneficeCard {
+          width: 100%;
+        }
+      }
+
+    }
+
+
+
+
+
+
+    .carCarousel {
+      .slider {
+          .carCard {
+              height: 100%;
+
+              .imageDiv {
+                  width: 90%;
+              }
+          }
+      }
+    }
+
+
+
+
 
 
     .carDiv {
@@ -343,5 +481,6 @@
         }
       }
     }
+    
  }
 }

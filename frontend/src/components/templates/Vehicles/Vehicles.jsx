@@ -10,12 +10,18 @@ export default function Vehicles({ cars }) {
 
   return (
     <>
-      <div className={styles.container}>
-        <div className={styles.hero}>
-          <div className={styles.heroText}>
-            <p>La route vous attend, choisissez votre companion</p>
+      <div className={styles.container} tabIndex="0">
+          <div className={styles.photo} ></div>
+          <div className={styles.shutter} style={{ '--flaps': '6' }}>
+            <div className={styles.flap} style={{ '--i': '0' }}></div>
+            <div className={styles.flap} style={{ '--i': '1' }}></div>
+            <div className={styles.flap} style={{ '--i': '2' }}></div>
+            <div className={styles.flap} style={{ '--i': '3' }}></div>
+            <div className={styles.flap} style={{ '--i': '4' }}></div>
+            <div className={styles.flap} style={{ '--i': '5' }}></div>
           </div>
-        </div>
+      </div>
+      <div className={styles.mainContainer}>  
         <div className={styles.title}>
           <h1>Nos véhicules</h1>
         </div>
