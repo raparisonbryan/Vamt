@@ -23,5 +23,8 @@
     "password-validator": "^5.3.0",
     "path": "^0.12.7",
     "react-icons": "^4.9.0"
+  },
+  "engines": {
+    "node": "^22.23.4"
   }
 }
